@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				var lis=document.getElementById('list').getElementsByTagName('li');
+				for(var i=0;i<lis.length;i++)
+				{
+					lis[i].style.color='red';
+				}
+			}
+		</script>
+		<!--引入jquery文件-->
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+//			$(document).ready(function(){
+//				
+//			})
+			$(function(){
+				$('#list li').css('color','blue');
+			})
+		</script>
+	</head>
+	<body>
+		<div id="list">
+			<ul>
+				<li>后盾人 人人做后盾</li>
+				<li>后盾人 人人做后盾</li>
+				<li>后盾人 人人做后盾</li>
+				<li>后盾人 人人做后盾</li>
+				<li>后盾人 人人做后盾</li>
+				<li>后盾人 人人做后盾</li>
+				<li>后盾人 人人做后盾</li>
+				<li>后盾人 人人做后盾</li>
+			</ul>
+		</div>
+	</body>
+</html>

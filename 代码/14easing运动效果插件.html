@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#gou{
+				width: 250px;
+				height: 250px;
+				position: absolute;
+				left: 0;
+				top: 30px;
+			}
+			#gou2{
+				width: 250px;
+				height: 250px;
+				position: absolute;
+				left: 0;
+				top: 300px;
+			}
+		</style>
+		<script src='jquery-3.4.1.js'></script>
+		<script src='jquery.easing.1.3.js'></script>
+		<script>
+			$(function(){
+				$("#btn").click(function(){
+					$("#gou").animate({'left':'600px'},2500,'easeOutElastic');
+					$("#gou2").animate({'left':'600px'},500,'easeOutBounce');
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" value='点我啊！' id='btn'/>
+		<img src="../../javascript/上课笔记/img/1.jpg" alt="" id='gou' />
+		<img src="../../javascript/上课笔记/img/1.jpg" alt="" id='gou2' />
+	</body>
+</html>

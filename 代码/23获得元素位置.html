@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			#box1{
+				width:800px;
+				height:600px;
+				margin:20px;
+				border:4px solid red;
+				position: relative;
+			}
+			#box2{
+				width:500px;
+				height:300px;
+				margin:100px;
+				border:4px solid orange;
+			}
+			#box3{
+				width:300px;
+				height:200px;
+				margin:50px;
+				border:4px solid green;
+				background:green;
+			}
+		</style>
+		<script src='jquery-3.4.1.js'></script>
+		<script>
+//			window.onload=function(){
+//				var box3=document.getElementById("box3");
+//				//如果是没有定位的元素，参照与离他最近的有定位属性的元素来获得
+//				var t=box3.offsetLeft;
+//				alert(t);
+//			}
+			$(function(){
+				//获得box3相对于整个页面的距离
+//				var re=$("#box3").offset().left;
+//				var re=$("#box3").offset().top;
+				//获得有定位属性的left值和top值
+				var re=$("#box3").position().top;
+				alert(re);
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<div id="box2">
+				<div id="box3"></div>
+			</div>
+		</div>
+	</body>
+</html>

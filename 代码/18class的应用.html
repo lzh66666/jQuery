@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			 }
+			 P{
+			 	float: left;
+			 	width: 150px;
+			 	height: 50px;
+			 	line-height: 50px;
+			 	text-align: center;
+			 	font-size: 30px;
+			 	color: white;
+			 	background: red;
+			 	margin: 10px;
+			 }
+			 p.cur{
+			 	color: black;
+			 	background: blue;
+			 	font-size: 50px;
+			 }
+		</style>
+		<script src='jquery-3.4.1.js'></script>
+		<!--<script src='jquery.easing.1.3.js'></script>-->
+		<script>
+			$(function(){
+				$("p").click(function(){
+					/*$(this).css({'background':'blue','color':'black','font-size':'50px'}).siblings('p').css({'background':'red','color':'white','font-size':'30px'});*/
+				$(this).addClass('cur').siblings('p').removeClass('cur');
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<p class='cur'>1</p>
+		<p>2</p>
+		<p>3</p>
+		<p>4</p>
+		<p>5</p>
+		<p>6</p>
+		<p>7</p>
+		<p>8</p>
+	</body>
+</html>

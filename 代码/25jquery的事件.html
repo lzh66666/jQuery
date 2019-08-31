@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#hd{
+				width: 500px;
+				height: 300px;
+				background: red;
+			}
+		</style>
+		<script src='jquery-3.4.1.js'></script>
+		<script src='jquery.easing.1.3.js'></script>
+		<script>
+			$(function(){
+//				$("#hd").click(function(){
+//					alert('后盾人 人人做后盾');
+//					
+//				})
+//				$("#hd").mouseover(function(){
+//					alert("hello后盾人")
+//				})
+				//用on绑定事件
+				$("#hd").on('click mouseover',function(){
+					alert("后盾人人人做后盾！")
+				})
+				//删除事件
+				$("#hd").off('mouseover');
+			})
+		</script>
+	</head>
+	<body>
+		<div id="hd">
+			
+		</div>
+	</body>
+</html>

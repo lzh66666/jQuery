@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#dog{
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			/*window.onload=function(){
+				document.getElementById("btn").onclick=function(){
+					document.getElementById("dog").style.display='none';
+				}
+			}*/
+			$(function(){
+				//给按钮加单击事件
+				$('#btn').click(function(){
+					//$('#dog').hide();
+					//$("#dog").show();
+					//自动控制图片显隐
+					//$("#dog").toggle();
+					//淡入淡出
+					//$("#dog").fadeOut(5000);
+					//$("#dog").fadeIn();
+					//回调函数会在动画执行完毕后被调用
+					/*$("#dog").fadeOut(5000,function(){
+						alert('报告长官，动画完毕');
+					});*/
+					//自动控制淡入淡出显隐
+					$("#dog").fadeToggle(2000);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点我啊" />
+		
+		<br /><br /><br />
+		<img src="../../javascript/上课笔记/img/1.jpg" alt=""id='dog' />
+		<h1>后盾人 人人做后盾</h1>
+	</body>
+</html>

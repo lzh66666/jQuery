@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			$(function(){
+				//原来讲过的所有的css的选择器,在jQuery中都可以用
+				//$("#box div p").css({'color':'red','font-size':'25px'});
+				//#box>p选择的是儿子辈的p标签
+				//$("#box>p").css({'color':'red','font-size':'25px'});
+				//选择的是紧邻在.one后面的一个p标签
+				//p+a.link
+				//$(".one+p").css({'color':'red','font-size':'25px'});
+				//选择的是.one后面的所有同级p标签！
+				//$(".one~p").css({'color':'red','font-size':'25px'});
+				//$("#box p:first").css({'color':'red','font-size':'25px'});
+				//$("#box p:last").css({'color':'red','font-size':'25px'});
+				//选择的是#box所有的p标签，但是排除掉class是one的
+				//$("#box p:not(.one)").css({'color':'red','font-size':'25px'});
+				//选择的是#box里的所有序号是偶数的p标签
+				//$("#box p:even").css({'color':'red','font-size':'25px'});
+				//$("#box p:odd").css({'color':'red','font-size':'25px'})
+				//选择的是box里面编号为3的p标签
+				//$("#box p:eq(3)").css({'color':'red','font-size':'25px'});
+				//选择的是#box里面序号大于3的p标签
+				//$("#box p:gt(3)").css({'color':'red','font-size':'25px'});
+				//$("#box p:lt(3)").css({'color':'red','font-size':'25px'});
+				//选择的是#box里内容包含 盾3
+				//$("#box p:contains(盾3)").css({'color':'red','font-size':'25px'});
+				//选择的是#box里的空p标签
+				//$("#box p:empty").css({'width':'500px','height':'50px','background':'red'});
+				//选择的是#box含span的p标签
+				//$("#box p:has(span)").css({'color':'red','font-size':'25px'});
+				//选择的是#box里的非空p标签
+				$("#box p:parent").css({'color':'red','font-size':'25px'});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p>后盾人 人人做后盾0</p>
+			<p class="one">后盾人 人人做后盾1</p>
+			<p>后盾人 人人做<span>后盾</span>2</p>
+			<p class="link">后盾人 <span>人人</span>做后盾3</p>
+			<p>后盾人 人人做后盾4</p>
+			<p>后盾人 人人做后盾5</p>
+			<p>后盾人 人人做后盾6</p>
+			<p>后盾人 人人做后盾7</p>
+			<p></p>
+			<p></p>
+			<div>
+				<p>我们也是p标签</p>
+				<p>我们也是p标签</p>
+				<p>我们也是p标签</p>
+			</div>
+		</div>
+		
+	</body>
+</html>

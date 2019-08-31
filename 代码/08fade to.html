@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#dog{
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			
+			$(function(){
+				//给按钮加单击事件
+				$('#btn').click(function(){
+					//让元素在2000毫秒的事件内透明度变为0.3
+					$("#dog").fadeTo(2000,0.3)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点我啊" />
+		
+		<br /><br /><br />
+		<img src="../../javascript/上课笔记/img/1.jpg" alt=""id='dog' />
+		<h1>后盾人 人人做后盾</h1>
+	</body>
+</html>
+

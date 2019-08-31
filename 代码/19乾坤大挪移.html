@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#hd1{
+				width:400px;
+				height:230px;
+				border:4px solid red;
+			}
+			#hd2{
+				width:400px;
+				height:230px;
+				border:4px solid blue;
+			}
+			#hd{
+				width:300px;
+			}
+		</style>
+		<script src='jquery-3.4.1.js'></script>
+		<script src='jquery.easing.1.3.js'></script>
+		<script>
+//			window.onload=function(){
+//				var hd1=document.getElementById("hd1");
+//				var hd2=document.getElementById("hd2");
+//				var btn=document.getElementById("btn");
+//				var n=1;
+//				btn.onclick=function(){
+//					if(n==1){
+//						var con=hd1.innerHTML;
+//						hd2.innerHTML=con;
+//						//将hd1清空
+//						hd1.innerHTML='';
+//						n=0;
+//					}
+//					else if(n==0){
+//						var con=hd2.innerHTML;
+//						hd1.innerHTML=con;
+//						hd2.innerHTML='';
+//						n=1;
+//					}
+//					
+//				}
+//			}
+			$(function(){
+				$("#btn").click(function(){
+					/*第一种方法
+					//获得hd1的内容
+					var con=$("#hd1").html();
+					//获得的内容写入到hd2里
+					$("#hd2").html(con);
+					//将hd1清空
+					$("#hd1").html(' ');*/
+					/*第二种方法*/
+					var con=$("#hd1").html();
+					//将hd1的内容改为hd2的内容
+					$("#hd1").html($("#hd2").html());
+					//将原来hd1的内容存到hd2里
+					$("#hd2").html(con);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id='hd1'>后盾人人人做后盾后盾人人人做后盾后盾人人人做后盾后盾人人人做后盾后盾人人人做后盾<img src="../../html/上课笔记/lu2.png" id='hd'/></div>
+			<br />
+			<input type="button" value='乾坤大挪移' id='btn'/>
+			<br />
+			<br />
+		<div id="hd2"></div>
+	</body>
+</html>

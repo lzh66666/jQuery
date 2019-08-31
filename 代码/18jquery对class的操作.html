@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src='jquery-3.4.1.js'></script>
+		<script src='jquery.easing.1.3.js'></script>
+		<script>
+			$(function(){
+				$("#btn").click(function(){
+					//给h1加一个新的class
+					//$("#title").addClass('abc');
+					//$("#title").prop('class','aaa');
+					
+					//删除class属性值
+					//$("#title").removeClass('hd');
+					
+					$("#title").toggleClass('biaoti');
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" id='btn' value='按钮'/>
+		<h1 id='title'class='hd bt biaoti houdun'>后盾人 人人做后盾</h1>
+	</body>
+</html>

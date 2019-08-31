@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			$(function(){
+				//与>一样      选择的是所有儿子辈的p标签
+				//$('#box').children('p').css({'color':'red','font-size':'25px'});
+				//选择的是所有子代的p标签
+				//$('#box').find('p').css({'color':'red','font-size':'25px'});
+				//.one+p的效果一样
+				//$('.one').next('p').css({'color':'red','font-size':'25px'});
+				//与.one~p一样，是one后面的所有同级p标签
+				//$('.one').nextAll('p').css({'color':'red','font-size':'25px'});
+				//$('.one').prevAll('p').css({'color':'red','font-size':'25px'});
+				//选择的是#one的父级元素
+				//$('#one').parent().css({'color':'red','font-size':'25px'});
+				//选择的是#one的祖宗级元素中class是hd的元素
+				//$('#one').parents('.hd').css({'color':'red','font-size':'25px'});
+				//选择的是所有与.one同级的标签
+				//$('.one').siblings().css({'color':'red','font-size':'25px'});
+				
+				$('.one').siblings('p').css({'color':'red','font-size':'25px'});
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<span>spanspan</span>
+			<p>后盾人 人人做后盾0</p>
+			<p class="one">后盾人 人人做后盾1</p>
+			<p>后盾人 人人做<span>后盾</span>2</p>
+			<p id='three'>后盾人 <span>人人</span>做后盾3</p>
+			<p>后盾人 人人做后盾4</p>
+			<p>后盾人 人人做后盾5</p>
+			<p>后盾人 人人做后盾6</p>
+			<p>后盾人 人人做后盾7</p>
+			<p></p>
+			<p></p>
+			<div>
+				<p id="one">我们也是p标签</p>
+				<p>我们也是p标签</p>
+				<p>我们也是p标签</p>
+			</div>
+		</div>
+	</body>
+</html>

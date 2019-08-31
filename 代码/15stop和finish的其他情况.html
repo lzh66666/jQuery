@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#gou{
+				width: 250px;
+				height: 250px;
+				position: absolute;
+				left: 0;
+				top: 30px;
+			}
+			
+		</style>
+		<script src='jquery-3.4.1.js'></script>
+		<script src='jquery.easing.1.3.js'></script>
+		<script>
+			//如果元素身上现在有多个运动，stop会停止元素身上正在执行的运动，然后运行队列中下一个运动
+			//如果元素身上现在有多个运动，finish会停止元素身上所有的运动，并且将元素的状态立即调整为最后一个指定的目标状态
+			$(function(){
+				$("#btn1").click(function(){
+					$("#gou").animate({'left':'200px'},5000);
+				})
+				$("#btn2").click(function(){
+					$("#gou").animate({'left':'400px'},5000);
+				})
+				$("#btn3").click(function(){
+					$("#gou").animate({'left':'600px'},5000);
+				})
+				$("#btn4").click(function(){
+					$("#gou").animate({'left':'800px'},5000);
+				})
+				//stop
+				$("#stop").click(function(){
+					//stop是停止元素身上正在执行的动画。
+					$("#gou").stop();
+				})
+				//finish
+				$("#finish").click(function(){
+					//finish会停止动画，并且将元素状态变为元素的最终指定状态。
+					$("#gou").finish();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" value='200'id="btn1" />
+		<input type="button" value='400'id="btn2" />
+		<input type="button" value='600'id="btn3" />
+		<input type="button" value='800'id="btn4" />
+		
+		<input type="button" value='stop' id="stop" />
+		<input type="button" value='finish' id="finish" />
+		<img src="img/1.jpg" alt="" id='gou' />
+	</body>
+</html>
